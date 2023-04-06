@@ -2,6 +2,7 @@ package openai_test
 
 import (
 	"bytes"
+	"context"
 	"errors"
 	"io"
 	"mime"
@@ -10,13 +11,10 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
-
-	. "github.com/sashabaranov/go-openai"
-	"github.com/sashabaranov/go-openai/internal/test"
-	"github.com/sashabaranov/go-openai/internal/test/checks"
-
-	"context"
 	"testing"
+
+	"github.com/gtkit/go-openai/internal/test"
+	"github.com/gtkit/go-openai/internal/test/checks"
 )
 
 // TestAudio Tests the transcription and translation endpoints of the API using the mocked server.
